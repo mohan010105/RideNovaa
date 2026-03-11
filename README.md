@@ -1,73 +1,221 @@
-# Welcome to your Lovable project
+🚖 RideNova – Real-Time Cab Booking Platform
 
-## Project info
+RideNova is a full-stack ride-hailing platform that allows users to book cabs, track drivers in real time, manage wallet payments, and complete rides securely using OTP verification. The system includes User, Driver, and Admin dashboards and provides an experience similar to modern ride-hailing applications like Uber or Ola.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+📌 Features
+👤 User Features
 
-## How can I edit this code?
+Search pickup and drop locations
 
-There are several ways of editing your application.
+Map-based route visualization
 
-**Use Lovable**
+Estimated fare calculation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Real-time driver tracking
 
-Changes made via Lovable will be committed automatically to this repo.
+OTP-based ride verification
 
-**Use your preferred IDE**
+Wallet payment system
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Ride history
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Ride cancellation before ride start
 
-Follow these steps:
+Driver rating system
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+🚗 Driver Features
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Online / Offline availability toggle
 
-# Step 3: Install the necessary dependencies.
-npm i
+Receive nearby ride requests
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Accept or reject ride requests
+
+Navigate to pickup location
+
+OTP verification to start ride
+
+Real-time ride tracking
+
+End ride functionality
+
+Driver earnings dashboard
+
+Ride history tracking
+
+🛠 Admin Features
+
+Dashboard analytics
+
+Total rides monitoring
+
+Revenue statistics
+
+Driver management
+
+User management
+
+Ride activity tracking
+
+🗺 Map & Routing System
+
+RideNova uses OpenStreetMap and OpenRouteService instead of Google Maps.
+
+Capabilities include:
+
+Location search suggestions
+
+Route generation
+
+Distance calculation
+
+ETA estimation
+
+Route visualization on map
+
+💳 Wallet & Payment System
+
+RideNova integrates Razorpay to enable wallet-based payments.
+
+Wallet Features:
+
+Secure wallet top-up
+
+Payment verification
+
+Balance management
+
+Transaction history
+
+Payment success validation before wallet update
+
+🔐 OTP Ride Verification
+
+Each ride generates a unique OTP when booking is created.
+
+Ride start process:
+
+Driver arrives at pickup location
+
+Passenger shares OTP
+
+Driver enters OTP
+
+System verifies OTP
+
+Ride starts only after successful verification
+
+This prevents unauthorized ride starts.
+
+📡 Real-Time Tracking
+
+RideNova implements real-time ride tracking using WebSockets.
+
+Features:
+
+Live driver location updates
+
+Route progress visualization
+
+Dynamic ETA updates
+
+Map marker updates every few seconds
+
+🧱 Tech Stack
+Frontend
+
+React.js
+
+Vite
+
+TailwindCSS
+
+Recharts
+
+Backend
+
+Node.js
+
+Express.js
+
+Socket.io
+
+Database
+
+Supabase (PostgreSQL)
+
+Maps & Routing
+
+OpenStreetMap
+
+OpenRouteService API
+
+Payments
+
+Razorpay
+
+🗄 Database Structure
+
+Main tables used in the system:
+
+users
+drivers
+bookings
+wallet_transactions
+driver_locations
+surge_pricing
+🔄 Ride Flow
+
+1️⃣ User selects pickup location
+2️⃣ User selects drop location
+3️⃣ Route and fare are calculated
+4️⃣ User confirms booking
+5️⃣ Driver receives ride request
+6️⃣ Driver accepts ride
+7️⃣ Passenger shares OTP with driver
+8️⃣ Ride starts after OTP verification
+9️⃣ Real-time ride tracking begins
+🔟 Ride completes and payment is processed
+
+🚀 Installation & Setup
+1️⃣ Clone Repository
+git clone https://github.com/yourusername/ridenova.git
+cd ridenova
+2️⃣ Install Dependencies
+npm install
+3️⃣ Configure Environment Variables
+
+Create .env file:
+
+SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
+
+ORS_API_KEY=
+
+RPAY_KEY_ID=
+RAZORPAY_KEY_SECRET=
+4️⃣ Start Backend Server
 npm run dev
-```
+5️⃣ Start Frontend
+npm run dev
+📊 Future Enhancements
 
-**Edit a file directly in GitHub**
+AI ride demand prediction
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Dynamic surge pricing
 
-**Use GitHub Codespaces**
+Push notifications
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Driver performance analytics
 
-## What technologies are used for this project?
+Multi-city ride support
 
-This project is built with:
+📄 License
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+This project is developed for educational and demonstration purposes.
 
-## How can I deploy this project?
+👨‍💻 Developed By
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Mohan Raj
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+RideNova – Smart Ride Hailing Platform 🚖
