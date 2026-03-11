@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 140 20% 98%;
+    --foreground: 150 40% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 40% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 40% 10%;
+
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 20% 94%;
+    --secondary-foreground: 150 40% 10%;
+
+    --muted: 150 15% 94%;
+    --muted-foreground: 150 10% 45%;
+
+    --accent: 150 20% 92%;
+    --accent-foreground: 150 40% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 15% 88%;
+    --input: 150 15% 88%;
+    --ring: 160 84% 39%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 150 20% 97%;
+    --sidebar-foreground: 150 10% 30%;
+    --sidebar-primary: 160 84% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 20% 92%;
+    --sidebar-accent-foreground: 150 40% 10%;
+    --sidebar-border: 150 15% 90%;
+    --sidebar-ring: 160 84% 39%;
+  }
+
+  .dark {
+    --background: 150 30% 6%;
+    --foreground: 150 10% 95%;
+
+    --card: 150 25% 9%;
+    --card-foreground: 150 10% 95%;
+
+    --popover: 150 25% 9%;
+    --popover-foreground: 150 10% 95%;
+
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 20% 15%;
+    --secondary-foreground: 150 10% 95%;
+
+    --muted: 150 15% 15%;
+    --muted-foreground: 150 10% 60%;
+
+    --accent: 150 20% 15%;
+    --accent-foreground: 150 10% 95%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 15% 18%;
+    --input: 150 15% 18%;
+    --ring: 160 84% 39%;
+
+    --sidebar-background: 150 25% 8%;
+    --sidebar-foreground: 150 10% 90%;
+    --sidebar-primary: 160 84% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 20% 13%;
+    --sidebar-accent-foreground: 150 10% 90%;
+    --sidebar-border: 150 15% 15%;
+    --sidebar-ring: 160 84% 39%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/70 backdrop-blur-xl border border-border/50 shadow-xl;
+  }
+
+  .glass-card-strong {
+    @apply bg-card/50 backdrop-blur-2xl border border-border/40 shadow-2xl;
+  }
+}
